@@ -1,20 +1,20 @@
-* Random Number Generator ver.1.0
+# Random Number Generator ver.1.0
 
-** General Information
+## General Information
 
 This script is made for my own training of tkinter / GUI
 applications. This application is nothing but generating a random
 number (within positive integers) according to the maximam number
 input by user.
 
-** Licences and responsibilities
+## Licences and responsibilities
 
 The author claim nothing about the copyright on the application. You
 can edit and redistribute absolutely freely. The original author takes
 no charges about troubles on your system or any place triggered by the
 original / edited versions.
 
-** Usage
+## Usage
 
 Simply execute on your shell
 
