@@ -6,7 +6,7 @@ import random
 import tkinter as tk
 from tkinter import messagebox
 
-roop_count = 0
+loop_count = 0
 
 # python3系では動かない?
 # reload(sys)
@@ -100,7 +100,7 @@ gen_next()
 label_rand = tk.Label(frame_text, textvariable=var, font=("Helvetica", 100, "bold"))
 label_rand.pack(fill='x', side='top')
 # 状態把握のためのカウンター
-roop_count = roop_count + 1
+loop_count = loop_count + 1
 
 # ラベル（乱数部分の後）
 label_after.pack(fill='x', side='top')
