@@ -29,7 +29,7 @@ def gen_next():
     # -> そういうわけではないっぽい　呼び出し方の問題
     # このやり方だと，実行するたびにどんどんラベルが増える（中身を更新するのではなく）
     # -> StringVar()を設定し，それに新しい値をsetする
-    if roop_count == 0:
+    if loop_count == 0:
         var.set('未入力')
     else:
         try:
@@ -72,6 +72,7 @@ frame_button.pack()
 label_entry = tk.Label(frame_entry, text=u'乱数の最大値を入力')
 label_entry.pack()
 entry_max = tk.Entry(frame_entry, width=20)
+entry_max.focus_set()
 # 前回の値を入れっぱなしにするのはどうやらこれでいいらしい
 entry_max.insert(tk.END, entry_max.get())
 entry_max.pack()
@@ -84,6 +85,8 @@ label_after = tk.Label(frame_text, text=u'です．')
 # 関数を実行するように指定するのではなく，関数オブジェクトの状態でコマンドに指定する
 button_next = tk.Button(frame_button, text='next', command=gen_next)
 button_ok = tk.Button(frame_button, text='OK', command=quit_widget)
+root.bind('<Return>', func=lambda x: gen_next())
+root.bind('<Escape>', func=lambda x: quit_widget())
 
 # ラベル（乱数部分の前）
 # label_before.grid(row=0, column=0)
